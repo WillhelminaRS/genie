@@ -1,7 +1,7 @@
 // CHECK SESSION
 if (!localStorage.getItem("logged")) {
   // Redirect dynamically to login page
-  window.location.href = `${window.location.origin}/login`;
+  window.location.href = `${window.location.origin}/login/`;
 }
 
 // LOAD DATA
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("users", JSON.stringify(users));
     }
 
-    window.location.href = `${window.location.origin}/dashboard`; // Redirect to dashboard
+    window.location.href = `${window.location.origin}/dashboard/`; // Redirect to dashboard
   });
 
   // Check button action (check the answer)

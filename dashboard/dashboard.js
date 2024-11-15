@@ -1,7 +1,7 @@
 // CHECK SESSION
 if (!localStorage.getItem("logged")) {
   // Redirect dynamically based on the current domain
-  window.location.href = `${window.location.origin}/login`;
+  window.location.href = `${window.location.origin}/login/`;
 }
 
 // LOAD DATA

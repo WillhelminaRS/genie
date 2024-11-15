@@ -1,7 +1,7 @@
 // CHECK SESSION
 if (localStorage.getItem("logged")) {
   // Redirect dynamically based on the current domain
-  window.location.href = `${window.location.origin}/dashboard`;
+  window.location.href = `${window.location.origin}/dashboard/`;
 }
 
 // LOAD DATA
@@ -102,6 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const { password, ...userWithoutPassword } = data;
     localStorage.setItem("logged", JSON.stringify(userWithoutPassword));
     alert(`Hola ${username}!`);
-    window.location.href = `${window.location.origin}/dashboard`;  // Use dynamic domain
+    window.location.href = `${window.location.origin}/dashboard/`;  // Use dynamic domain
   });
 });
