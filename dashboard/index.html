@@ -16,12 +16,31 @@
         <div class="sidebar-button">
           <a class="button" href="../dashboard/">Dashboard</a>
           <a class="button" href="../soal/">Soal</a>
-          <a class="button" href="">Profil</a>
         </div>
       </div>
       <a onclick="handleLogout()" class="button" href="../">Keluar</a>
     </div>
     <div class="content-container">
+      <div class="responsive-navigation-container">
+        <div class="responsive-icon">
+          <img class="responsive-image" src="../assets/icon.png" alt="" />
+        </div>
+        <div class="responsive-button-container">
+          <a class="responsive-button" href="../dashboard/">Dashboard</a>
+          <a class="responsive-button" href="../soal/">Soal</a>
+          <a onclick="handleLogout()" class="responsive-button" href="../"
+            >Keluar</a
+          >
+        </div>
+        <div class="mobile-button-container">
+          <a class="mobile-button" href="../dashboard/">Dashboard</a>
+          <a class="mobile-button" href="../soal/">Soal</a>
+          <a onclick="handleLogout()" class="mobile-button" href="../"
+            >Keluar</a
+          >
+        </div>
+      </div>
+
       <div class="inner-content-container">
         <div class="navigation-container">
           <div class="">
@@ -50,7 +69,9 @@
             href="../action_dashboard/?key=PenggunaanTandaBaca&current=0&benar=0"
           >
             <img class="material-image" src="../assets/tandabaca.png" alt="" />
-            <div id="PenggunaanTandaBaca_text" class="">Penggunaan Tanda Baca</div>
+            <div id="PenggunaanTandaBaca_text" class="">
+              Penggunaan Tanda Baca
+            </div>
           </a>
           <a
             id="PenulisanKata"
@@ -66,7 +87,9 @@
             href="../action_dashboard/?key=PenggunaanKataSerapan&current=0&benar=0"
           >
             <img class="material-image" src="../assets/serapan.png" alt="" />
-            <div id="PenggunaanKataSerapan_text" class="">Penggunaan Kata Serapan</div>
+            <div id="PenggunaanKataSerapan_text" class="">
+              Penggunaan Kata Serapan
+            </div>
           </a>
         </div>
       </div>

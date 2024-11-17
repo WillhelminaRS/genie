@@ -5,8 +5,8 @@ body {
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0px;
+  box-sizing: border-box;
+  margin: 0px;
 }
 
 .landing-body {
@@ -18,63 +18,154 @@ body {
 }
 
 .navigation-container {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
 }
+
 .navigation-icon {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 50px;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  gap: 1rem;
 }
+
 .navigation-button {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .button {
-    background-color: #6dbdfa; /* Button background color */
-    color: white; /* Button text color */
-    padding: 10px 20px; /* Space inside the button */
-    border-radius: 4px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Font size */
-    display: inline-block; /* Make the link behave like a button */
-    text-align: center; /* Center the text */
-    cursor: pointer; /* Change cursor to pointer */
+  background-color: #6dbdfa; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Space inside the button */
+  border-radius: 4px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  display: inline-block; /* Make the link behave like a button */
+  text-align: center; /* Center the text */
+  cursor: pointer; /* Change cursor to pointer */
 }
+
 .button:hover {
-    background-color: #5ca9d1; 
+  background-color: #5ca9d1;
 }
 
 .content-container {
-    padding: 50px;
-    height: 100vh;
-    display: flex;
-    gap: 16px;
-    width: 50%;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-}
-.content-title {
-    font-size: 80px;
-    color: #F3CCB3;
-    font-weight: bold;
-}
-.content-subtitle {
-    font-size: 30px;
-    color: white;
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  gap: 16px;
+  width: 50%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    background-color: beige;
+.content-title {
+  font-size: 80px;
+  color: #f3ccb3;
+  font-weight: bold;
+}
+
+.content-subtitle {
+  font-size: 30px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  background-color: beige;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .content-title {
+    font-size: 60px;
+  }
+
+  .content-subtitle {
+    font-size: 24px;
+  }
+
+  .content-container {
+    width: 70%;
+  }
+
+  .navigation-icon {
+    font-size: 40px;
+  }
+
+  .navigation-button .button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 768px) {
+  .content-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .content-title {
+    font-size: 40px;
+  }
+
+  .content-subtitle {
+    font-size: 20px;
+  }
+
+  .navigation-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navigation-icon {
+    font-size: 30px;
+  }
+
+  .navigation-button {
+    margin-top: 10px;
+    gap: 1rem;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 480px) {
+  .content-title {
+    font-size: 28px;
+  }
+
+  .content-subtitle {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .navigation-container {
+    padding: 10px;
+  }
+
+  .navigation-icon {
+    font-size: 24px;
+  }
 }
