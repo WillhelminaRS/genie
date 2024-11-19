@@ -35,8 +35,16 @@ async function loadData() {
     console.error("There was a problem with the fetch operation:", error);
   }
 }
-
 loadData();
+
+document.querySelectorAll(".selectable").forEach((element) => {
+  element.addEventListener("click", () => {
+    document
+      .querySelectorAll(".selectable")
+      .forEach((el) => el.classList.remove("active")); // Clear existing active states
+    element.classList.add("active"); // Activate the clicked element
+  });
+});
 
 // HANDLE OPTION
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Next Question button action
   nextButton.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = `${window.location.origin}/action_soal/?key=${key}&current=${parseInt(current) + 1}&benar=${benar}`;
+    window.location.href = `${
+      window.location.origin
+    }/action_soal/?key=${key}&current=${parseInt(current) + 1}&benar=${benar}`;
   });
 
   // Finish button action
@@ -127,7 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     benarMessage.style.display = isCorrect ? "block" : "none";
     salahMessage.style.display = isCorrect ? "none" : "block";
 
-    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${parseInt(currentQuestion.right) + 1}, ${currentQuestion.options[currentQuestion.right]}`;
+    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${
+      parseInt(currentQuestion.right) + 1
+    }, ${currentQuestion.options[currentQuestion.right]}`;
 
     checkButton.style.display = "none";
 

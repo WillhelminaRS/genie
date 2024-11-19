@@ -94,11 +94,11 @@ body {
   margin: 1rem 0;
 }
 #benar {
-  color: #1FD834;
+  color: #1fd834;
   margin: 1rem 0;
 }
 #salah {
-  color: #FF000059;
+  color: #ff000059;
   margin: 1rem 0;
 }
 #nomor {
@@ -109,16 +109,54 @@ body {
   border-radius: 4px; /* Rounded corners */
 }
 
-#finish,#next,#check, #pilihan_1, #pilihan_2 {
+#finish,
+#next,
+#check,
+#pilihan_1,
+#pilihan_2 {
   color: #5ca9d1; /* Text color */
   border: 2px solid #5ca9d1; /* Optional: border with same color */
   background-color: transparent; /* Optional: transparent background */
   padding: 8px 16px; /* Padding for better button appearance */
   border-radius: 4px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
-#finish:hover,#next:hover,#check:hover, #pilihan_1:hover, #pilihan_2:hover {
+
+#finish:hover,
+#next:hover,
+#check:hover,
+#pilihan_1:hover,
+#pilihan_2:hover {
   color: white; /* Change text color on hover */
   background-color: #5ca9d1; /* Background color on hover */
+}
+
+#pilihan_1:active,
+#pilihan_2:active {
+  background-color: #5ca9d1; /* Active background color */
+  color: white; /* Active text color */
+  box-shadow: 0 0 10px #5ca9d1; /* Glow effect on click */
+  transform: scale(0.95); /* Slightly shrink for a press effect */
+  transition: transform 0.1s ease; /* Smooth transition for the press effect */
+}
+
+/* Add animation to indicate active status */
+.active {
+  background-color: #5ca9d1; /* Active background color */
+  color: white; /* Active text color */
+  box-shadow: 0 0 15px #5ca9d1; /* Glow effect */
+  animation: pulse 0.8s infinite; /* Pulse animation for active effect */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #5ca9d1;
+  }
+  50% {
+    box-shadow: 0 0 20px #5ca9d1;
+  }
+  100% {
+    box-shadow: 0 0 10px #5ca9d1;
+  }
 }

@@ -25,11 +25,11 @@ async function loadData() {
   try {
     const users = await getDataFromLocalStorage(
       "users",
-      `${window.location.origin}/data/users.json`  // Use dynamic domain
+      `${window.location.origin}/data/users.json` // Use dynamic domain
     );
     const questions = await getDataFromLocalStorage(
       "questions",
-      `${window.location.origin}/data/questions.json`  // Use dynamic domain
+      `${window.location.origin}/data/questions.json` // Use dynamic domain
     );
     // console.log("Users:", users);
     // console.log("Questions:", questions);
@@ -38,6 +38,15 @@ async function loadData() {
   }
 }
 loadData();
+
+document.querySelectorAll(".selectable").forEach((element) => {
+  element.addEventListener("click", () => {
+    document
+      .querySelectorAll(".selectable")
+      .forEach((el) => el.classList.remove("active")); // Clear existing active states
+    element.classList.add("active"); // Activate the clicked element
+  });
+});
 
 // HANDLE OPTION
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.getElementById("next");
   nextButton.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = `${window.location.origin}/action_soal/?key=${key}&current=${parseInt(current) + 1}&benar=${benar}`;
+    window.location.href = `${
+      window.location.origin
+    }/action_soal/?key=${key}&current=${parseInt(current) + 1}&benar=${benar}`;
   });
   nextButton.style.display = "none";
 
@@ -129,7 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
     benarMessage.style.display = isCorrect ? "block" : "none";
     salahMessage.style.display = isCorrect ? "none" : "block";
 
-    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${parseInt(currentQuestion.right) + 1}, ${currentQuestion.options[currentQuestion.right]}`;
+    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${
+      parseInt(currentQuestion.right) + 1
+    }, ${currentQuestion.options[currentQuestion.right]}`;
 
     checkButton.style.display = "none";
 
